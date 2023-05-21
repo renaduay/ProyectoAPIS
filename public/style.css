@@ -47,7 +47,7 @@ h2 {
 
 }
 #google-login{
-  margin-left: 650px;
+  margin-left: 580px;
 }
 #loginhtml{
   background: lightgray
@@ -99,7 +99,8 @@ h2 {
   
   
   .form-inicio{
-    margin-top: 20px;
+    margin-top: 20%;
+    margin-left: 40%;
   }
   
   input[type="text"],
@@ -111,7 +112,7 @@ h2 {
   
   #submit-button{
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color:cornflowerblue;
     color: white;
     border: none;
     cursor: pointer;
