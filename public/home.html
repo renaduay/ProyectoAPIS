@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Newspaper</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js" defer></script>
+</head>
+
+<body>
+  <h1 id="titulo">Diario de noticias</h1>
+
+  <form id="search">
+    Pone un titulo para escribir una nueva noticia: <input type="text" id="title-input" />
+    <input type="submit" id="listo" value="Listo">
+  </form>
+
+  <hr />
+
+  <div id="results" class="hidden">
+    El cuerpo de la noticia <strong id="title"></strong> es:
+    <blockquote id="news"></blockquote>
+    <hr />
+    <form id="set">
+      <h2>
+        Modifica el cuerpo de la noticia
+      </h2>
+     Titulo: <input id="set-title-input" type="text" readonly />
+      <p>
+       Noticia:
+      </p>
+      <textarea id="set-news-input"></textarea>
+      <input type="submit" value="Guardar">
+      <p id="status"></p>
+    </form>
+  </div>
+
+  <form action="/logout" method="POST">
+    <input type="submit" id="cerrarsesion"value="Cerrar sesion">
+  </form>
+</body>
+
+</html>

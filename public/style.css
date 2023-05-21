@@ -1,0 +1,93 @@
+body {
+  font-family: Times, serif;
+  font-size: 14pt;
+}
+
+.hidden {
+  display: none;
+}
+
+textarea,
+input[type=text] {
+  font-size: 14pt;
+}
+
+input[type=password] {
+  font-size: 14pt;
+}
+
+textarea {
+  height: 100px;
+  width: 300px;
+}
+
+#status {
+  color: green;
+}
+
+h2 {
+  font-size: 14pt;
+}
+#search {
+  font-family: 'Square Peg', cursive; 
+  font-size: 14px ;
+  margin-left: 300px;
+}
+#titulo {
+  margin-left: 600px;
+}
+#results{
+  text-align: center;
+  background: lightgray
+}
+#login{
+  text-align: center;
+  font-family: monospace;
+  padding-top: 200px;
+
+}
+#google-login{
+  margin-left: 650px;
+}
+#loginhtml{
+  background: lightgray
+}
+#input-noticia{
+  background-color: lightslategray;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 40px;
+  outline: 0;
+  padding: 4px 20px 0;
+}
+#listo{
+    background-color: lightseagreen;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 17px;
+    height: 35px;
+    margin-top: 30px;
+    outline: 0;
+    text-align: center;
+    font-family: 'Square Peg', cursive; 
+  }
+  #cerrarsesion{
+    background-color:lightseagreen;
+    border-radius: 5px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 14px;
+    height: 30px;
+    margin-top: 30px;
+    outline: 0;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
