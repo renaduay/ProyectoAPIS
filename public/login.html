@@ -2,13 +2,23 @@
 <html id="loginhtml">
 <head>
   <title>Inicio de sesion</title>
-
+<head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
   
+
+<head>
+  <title id="iniciar-sesion">Iniciar sesión</title>
 </head>
 <body>
-  <h1 id="login">Iniciar sesion</h1>
+  <form class="form-inicio" method="post" action="/login">
+    <input type="text" name="username" placeholder="Nombre de usuario" required><br>
+    <input type="password" name="password" placeholder="Contraseña" required><br>
+    <button id="submit-button" type="submit">Iniciar sesión</button>
+  </form>
+</body>
+</html>
+
     
 <div class="row">
   <div class="col-md-3">

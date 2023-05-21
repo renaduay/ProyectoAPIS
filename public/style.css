@@ -91,3 +91,32 @@ h2 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
+
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  
+  .form-inicio{
+    margin-top: 20px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #submit-button{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  submit-button:hover {
+    background-color: #45a049;
+  }
