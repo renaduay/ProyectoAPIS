@@ -30,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+
   // Llamar a la función para obtener las noticias al cargar la página
   getNews();
 });
+
+// 1. new de la clase que definimos
+// 2. función de la linea 6 a la 31 (la llamamos desde el constructor)
+// 3. otra funcion para obtener detalles cuando se haga click en los titulos
+// traer titulos y id
+// usuar mockachino 

@@ -49,6 +49,9 @@ class NewspaperBackendServer {
     const routeParams = req.params;
     const title = routeParams.title;
     
+
+
+    // News API
     const apiKey = 'b4741c10237d470898eac3698ae142a9';
     const url = `https://newsapi.org/v2/everything?q=${title}&language=es&apiKey=${apiKey}`;
 
