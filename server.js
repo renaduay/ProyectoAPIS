@@ -4,7 +4,7 @@ import db from './db.js';
 import path from 'path';
 import fs from 'fs';
 import Authorization from "./auth.js";
-import fetch from 'node-fetch';
+
 
 const __dirname = fs.realpathSync('.');
 
@@ -51,7 +51,6 @@ class NewspaperBackendServer {
 
 }
 }
-
 
 
 new NewspaperBackendServer();
