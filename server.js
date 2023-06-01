@@ -48,45 +48,10 @@ class NewspaperBackendServer {
   async _doLookup(req, res) {
     const routeParams = req.params;
     const title = routeParams.title;
-    
 
-
-    // News API
-    const apiKey = 'b4741c10237d470898eac3698ae142a9';
-    const url = `https://newsapi.org/v2/everything?q=${title}&language=es&apiKey=${apiKey}`;
-
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-
-      const articles = data.articles.map(article => ({
-        title: article.title,
-        urlToImage: article.urlToImage,
-        publishedAt: article.publishedAt,
-        source: article.source,
-        url: article.url
-      }));
-
-      const responseData = {
-        title: title,
-        news: articles
-      };
-
-      res.json(responseData);
-    } catch (error) {
-      console.error('Error al obtener las noticias:', error);
-      res.status(500).json({ error: 'Error al obtener las noticias' });
-    }
-  }
-
-  async _doSave(req, res) {
-    const query = { title: req.body.title.toLowerCase() };
-    const update = { $set: { news: req.body.news } };
-    const params = { upsert: true };
-    const collection = db.collection("dict");
-    await collection.updateOne(query, update, params);
-    res.json({ success: true });
-  }
 }
+}
+
+
 
 new NewspaperBackendServer();
