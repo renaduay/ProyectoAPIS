@@ -31,6 +31,14 @@ class NewspaperBackendServer {
     app.post("/logout", (req, res) => {
       req.logOut(err => console.log(err));
       res.redirect("/login");
+
+      app.get("/news", (req, res) => {
+        fetch("https://")
+        .then(response => response.json())
+        .then(data => {
+          res.jsonStringify(data);
+        })
+      })
     });
 
     // Start server
