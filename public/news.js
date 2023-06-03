@@ -1,6 +1,6 @@
 
     const JSON_PATH = "https://www.mockachino.com/220cebc5-2bc2-49/news"
-class App {
+class AllNews {
   constructor() {
      this._onJsonReady = this._onJsonReady.bind(this);
      this._onTecClick = this._onTecClick.bind(this);
@@ -68,3 +68,4 @@ class News {
 const app = new App();
 app.loadNews();
 
+export default AllNews;
