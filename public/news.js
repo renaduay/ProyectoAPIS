@@ -1,6 +1,5 @@
 
-    const JSON_PATH = 'https://yayinternet.github.io/lecture17/oo-albums/albums.json';
-
+    const JSON_PATH = "https://www.mockachino.com/220cebc5-2bc2-49/news"
 class App {
   constructor() {
      this._onJsonReady = this._onJsonReady.bind(this);
@@ -8,6 +7,13 @@ class App {
     
      const tecButton = document.querySelector("#tec");
      tecButton.addEventListener('click', this._onTecClick);
+
+
+     this._onJsonReady = this._onJsonReady.bind(this);
+     this._onDepClick = this._onDepClick.bind(this);
+    
+     const depButton = document.querySelector("#dep");
+     depButton.addEventListener('click', this._onDepClick);
   }
   
   _onTecClick() {
@@ -18,6 +24,13 @@ class App {
      
   }
   
+  _onDepClick() {
+    this.newsList.sort( function (a1, a2) {
+      return a1.year - a2.year;
+    });
+    this._renderNewsImages();
+}
+
   _renderNewsImages() {
     const imagesContainer = document.querySelector("#news-container");
     imagesContainer.innerHTML = "";

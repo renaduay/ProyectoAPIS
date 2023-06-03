@@ -206,3 +206,14 @@ header button{
   font-size: 14px;
   color: #555;
 }
+
+
+img {
+  width: 200px;
+  margin: 5px;
+}
+
+#album-container {
+  padding: 20px 0;
+}
+  
