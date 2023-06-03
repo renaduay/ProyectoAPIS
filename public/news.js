@@ -17,16 +17,16 @@ class App {
   }
   
   _onTecClick() {
-    this.newsList.sort( function (a1, a2) {
-      return a1.year - a2.year;
+    this.newsList.sort( function (n1) {
+      return n1.img;
     });
     this._renderNewsImages();
      
   }
   
   _onDepClick() {
-    this.newsList.sort( function (a1, a2) {
-      return a1.year - a2.year;
+    this.newsList.sort( function (n4) {
+      return n4.img;
     });
     this._renderNewsImages();
 }
