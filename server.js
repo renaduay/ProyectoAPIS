@@ -33,7 +33,7 @@ class NewspaperBackendServer {
       res.redirect("/login");
 
       app.get("/news", (req, res) => {
-        fetch("https://")
+        fetch("https://www.mockachino.com/220cebc5-2bc2-49/news")
         .then(response => response.json())
         .then(data => {
           res.jsonStringify(data);
