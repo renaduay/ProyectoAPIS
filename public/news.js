@@ -55,17 +55,17 @@ class AllNews {
   }
 }
 
-class News {
+class Images {
   constructor(newsContainer, imageUrl) {
     // Same as document.createElement('img');
     const image = new Image();
     image.src = imageUrl;
+    image.height = 100;
     newsContainer.append(image);
   }
 }
 
 // script.js
-const app = new App();
+const app = new AllNews();
 app.loadNews();
 
-export default AllNews;
