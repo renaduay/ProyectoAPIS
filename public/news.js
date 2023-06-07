@@ -36,6 +36,7 @@ class AllNews {
     imagesContainer.innerHTML = "";
     for (const news of this.newsList) {      
       const a = new Images(imagesContainer, news.url);        
+      new Images(imagesContainer, news.img);
     }  
   }
   
