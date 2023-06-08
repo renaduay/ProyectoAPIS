@@ -12,7 +12,7 @@ class Login {
   
       const loginBody = {
         username: username,
-        password: password
+        password: password,
       };
   
       const fetchOptions = {
