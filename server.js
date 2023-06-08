@@ -4,7 +4,7 @@ import db from './db.js';
 import path from 'path';
 import fs from 'fs';
 import Authorization from "./auth.js";
-import AllNews from "./news.js"; 
+
 
 
 const __dirname = fs.realpathSync('.');
@@ -57,6 +57,11 @@ class NewspaperBackendServer {
   async _doLookup(req, res) {
     const routeParams = req.params;
     const title = routeParams.title;
+
+}
+
+async _doSave(req, res) {
+
 
 }
 }
