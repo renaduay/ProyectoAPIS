@@ -1,5 +1,4 @@
-
-    const JSON_PATH = "https://www.mockachino.com/220cebc5-2bc2-49/news"
+const JSON_PATH = "https://www.mockachino.com/220cebc5-2bc2-49/news"
 class AllNews {
   constructor() {
      this._onJsonReady = this._onJsonReady.bind(this);
