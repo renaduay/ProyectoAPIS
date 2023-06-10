@@ -41,6 +41,7 @@ class NewspaperBackendServer {
         })
       })
     });
+    
 
     // Start server
     app.listen(3000, () => console.log('Listening on port 3000'));
@@ -57,14 +58,24 @@ class NewspaperBackendServer {
   async _doLookup(req, res) {
     const routeParams = req.params;
     const title = routeParams.title;
+    const query = { word: word.toLowerCase() };
+    const collection = db.collection("dict");
+    const stored = await collection.findOne(query);
+    const response = {
+      title: title,
+      definition: stored ? stored.definition : ''
+    };
+    res.json(response);
+  }
 
+  async _doSave(req, res) {
+    const query = { word: req.body.word.toLowerCase() };
+    const update = { $set: { definition: req.body.definition } };
+    const params = { upsert: true };
+    const collection = db.collection("dict");
+    await collection.updateOne(query, update, params);
+    res.json({ success: true });
+  }
 }
-
-async _doSave(req, res) {
-
-
-}
-}
-
 
 new NewspaperBackendServer();
