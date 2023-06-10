@@ -9,16 +9,16 @@
   
 <body>
   <form class="form-inicio" method="post" action="/login">
-    <h1 id="iniciar-sesion">Iniciar sesión</h1>
-    <input type="text" name="username" placeholder="Nombre de usuario" required><br>
-    <input type="password" name="password" placeholder="Contraseña" required><br>
-    <button id="submit-button" type="submit">Iniciar sesión</button>
+    <h1 id="iniciar-sesion" style="font-size:large;" >Iniciar sesión</h1>
+    <input type="text" style="font-size: medium;"name="username" placeholder="Nombre de usuario" required><br>
+    <input type="password" name="password" placeholder="Contraseña" style="font-size: medium;"><br>
+    <button id="submit-button"style="font-size: medium;" type="submit">Iniciar sesión</button>
   </form>
 <br>
 <br>
 <div class="row">
   <div class="col-md-3">
-    <a id="google-login" class="btn btn-outline-dark" href="/auth/google" role="button" style="text-transform:none">
+    <a id="google-login"  class="btn btn-outline-dark" href="/auth/google" role="button" style="text-transform:none">
       <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
       Inicia sesión con Google
     </a>
