@@ -1,7 +1,7 @@
 import Newspaper from "./newspaper.js";
 import TitleNews from "./titleNews.js";
 import TitleSetNews from "./titleSetNews.js";
-import AllNews from "./news.js"; 
+
 
 class App {
   constructor() {
