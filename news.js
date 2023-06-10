@@ -3,40 +3,32 @@ class AllNews {
   constructor() {
      this._onJsonReady = this._onJsonReady.bind(this);
      this._onTecClick = this._onTecClick.bind(this);
+     this._onDepClick = this._onDepClick.bind(this);
     
      const tecButton = document.querySelector("#tec");
      tecButton.addEventListener('click', this._onTecClick);
-
-
-     this._onJsonReady = this._onJsonReady.bind(this);
-     this._onDepClick = this._onDepClick.bind(this);
     
      const depButton = document.querySelector("#dep");
      depButton.addEventListener('click', this._onDepClick);
   }
   
   _onTecClick() {
-    this.newsList.sort( function (n1) {
-      return n1.img;
-    });
-    this._renderNewsImages();
-     
+    const tecNewsList = this.newsList.filter(news => news.category === 'Tecnología');
+    this._renderNewsImages(tecNewsList);
   }
-  
-  _onDepClick() {
-    this.newsList.sort( function (n4) {
-      return n4.img;
-    });
-    this._renderNewsImages();
-}
 
-  _renderNewsImages() {
+  _onDepClick() {
+    const depNewsList = this.newsList.filter(news => news.category === 'Deporte');
+    this._renderNewsImages(depNewsList);
+  }
+
+  _renderNewsImages(newsList) {
     const imagesContainer = document.querySelector("#news-container");
     imagesContainer.innerHTML = "";
-    for (const news of this.newsList) {      
-      const a = new Images(imagesContainer, news.url);        
-      new Images(imagesContainer, news.img);
-    }  
+
+    for (const news of newsList) {
+      const image = new Images(imagesContainer, news.img);
+    }
   }
   
   loadNews() {
@@ -44,10 +36,10 @@ class AllNews {
       .then(this._onResponse)
       .then(this._onJsonReady);
   }
-  
+
   _onJsonReady(json) {
     this.newsList = json.news;
-    this._renderNewsImages()
+    this._renderNewsImages(this.newsList);
   }
 
   _onResponse(response) {
