@@ -55,7 +55,14 @@ font-family: 'Times New Roman', Times, serif;
 }
 #loginhtml{
   background: lightgray
+
+
+
 }
+
+
+
+/* home html */
 #input-noticia{
   background-color: lightslategray;
   border-radius: 12px;
@@ -126,6 +133,12 @@ font-family: 'Times New Roman', Times, serif;
     background-color: #45a049;
   }
   
+
+
+
+
+
+
 
 /*
 *{
