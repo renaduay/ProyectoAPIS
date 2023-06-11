@@ -6,7 +6,6 @@ import fs from 'fs';
 import Authorization from "./auth.js";
 
 
-
 const __dirname = fs.realpathSync('.');
 
 class NewspaperBackendServer {

@@ -1,4 +1,5 @@
 const JSON_PATH = "https://www.mockachino.com/220cebc5-2bc2-49/news"
+
 class AllNews {
   constructor() {
     this.newsList = []; // Lista de noticias
@@ -60,6 +61,14 @@ class Images {
   }
 }
 
+
+
+
+
 // script.js
 const app = new AllNews();
 app.loadNews();
+
+//export default AllNews;
+//export default Images;
+
