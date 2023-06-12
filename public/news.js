@@ -40,7 +40,7 @@ class AllNews {
   }
 //filtrar categoria Deportes
   _onDepClick() {
-    const depNewsList = this.newsList.filter(news => news.category === 'Deporte');
+    const depNewsList = this.newsList.filter(news => news.category === 'Deportes');
     this._renderNewsImages(depNewsList);
   }
   //filtrar categoria Programacion
