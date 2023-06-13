@@ -15,7 +15,7 @@ class App {
     this._onSet = this._onSet.bind(this);
     setForm.addEventListener('submit', this._onSet);
 
-    const logoutButton = document.querySelector("#logout-button");
+    const logoutButton = document.querySelector("#cerrarsesion");
     logoutButton.addEventListener('click', this.newspaper.logout);
   }
 

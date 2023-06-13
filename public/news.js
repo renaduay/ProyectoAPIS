@@ -72,6 +72,7 @@ class AllNews {
   _onJsonReady(json) {
     this.newsList = json.news;
     this._renderNewsImages(this.newsList);
+
   }
 
   _onResponse(response) {
