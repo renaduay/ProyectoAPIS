@@ -1,4 +1,5 @@
-const JSON_PATH = "https://www.mockachino.com/220cebc5-2bc2-49/news"
+const JSON_PATH = '/allNews'; 
+
 class AllNews {
   constructor() {
     this.newsList = []; // Lista de noticias
@@ -25,6 +26,8 @@ class AllNews {
 
     const eduButton = document.querySelector("#edu");
     eduButton.addEventListener('click', this._onEduClick);
+
+    this.loadNews(); 
 
   }
   
@@ -55,11 +58,12 @@ class AllNews {
   }
 
   _renderNewsImages(newsList) {
+
     const imagesContainer = document.querySelector("#news-container");
     imagesContainer.innerHTML = "";
 
     for (const news of newsList) {
-      const image = new Images(imagesContainer, news.img);
+      const image = new Images(imagesContainer, news.img, news.body); 
     }
   }
 
@@ -72,7 +76,6 @@ class AllNews {
   _onJsonReady(json) {
     this.newsList = json.news;
     this._renderNewsImages(this.newsList);
-
   }
 
   _onResponse(response) {
@@ -82,20 +85,23 @@ class AllNews {
 
 
 class Images {
-  constructor(newsContainer, imageUrl) {
+  constructor(newsContainer, imageUrl, newsBody) {
     // Same as document.createElement('img');
     const image = new Image();
     image.src = imageUrl;
     image.height = 100;
+    image.alt = newsBody;
+    image.addEventListener('click',this._onClickImage); 
     newsContainer.append(image);
+
+  }
+
+  _onClickImage(event) {  
+    event.preventDefault();
+    const imagesContainer = document.querySelector("#news-body-container");
+    imagesContainer.innerHTML = this.alt;
   }
 } 
 
-
-
-// script.js
 const app = new AllNews();
-app.loadNews();
 
-//export default AllNews;
-//export default Images; 

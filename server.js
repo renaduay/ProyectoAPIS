@@ -1,10 +1,11 @@
+
 import express from 'express';
 import passport from 'passport';
 import db from './db.js';
 import path from 'path';
 import fs from 'fs';
 import Authorization from "./auth.js";
-
+import fetch from 'node-fetch';  
 
 const __dirname = fs.realpathSync('.');
 
@@ -15,7 +16,7 @@ class NewspaperBackendServer {
     app.use(express.static('public'));
     app.use(express.urlencoded({ extended: false }));
     this._auth = new Authorization(app);
-
+   
     app.get('/lookup/:title', this._doLookup);
     app.post('/save/', this._doSave);
     app.get('/login/', this._login);
@@ -31,15 +32,22 @@ class NewspaperBackendServer {
     app.post("/logout", (req, res) => {
       req.logOut(err => console.log(err));
       res.redirect("/login");
+    });
 
-      app.get("/news", (req, res) => {
+      
+
+      app.get("/news", (req, res) => { 
+        res.sendFile(path.join(__dirname, "public/news.html"));
+      })
+
+      app.get("/allNews", (req, res) => { 
         fetch("https://www.mockachino.com/220cebc5-2bc2-49/news")
         .then(response => response.json())
         .then(data => {
-          res.jsonStringify(data);
+          res.json(data);  
         })
       })
-    });
+
 
 
     // Start server
