@@ -34,6 +34,10 @@ class NewspaperBackendServer {
       res.redirect("/login");
     });
 
+    /*app.post("/goNews", (req, res) => {
+      req.logOut(err => console.log(err));
+      res.redirect("/news");
+    });*/
       
 
       app.get("/news", (req, res) => { 
