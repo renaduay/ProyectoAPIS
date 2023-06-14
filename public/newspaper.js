@@ -26,13 +26,6 @@ class Newspaper {
         return fetch('/logout/', fetchOptions);
     }
 
-    /*goNews() {
-        const fetchOptions = {
-            method: 'POST',            
-        };
-        
-        return fetch('/goNews/', fetchOptions);
-    }*/
 }
 
 
